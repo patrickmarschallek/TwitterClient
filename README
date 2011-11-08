@@ -1,0 +1,45 @@
+TwitterClient by Patrick Marschallek
+erstellt am 07.11.2011
+
+	1. Wie starte ich den TwitterClient
+	2. Wie benutze ich den TwitterClient
+	3. Wie beende ich den TwitterClient
+
+1. Wie starte ich den TwitterClient
+
+	Man benötigt das Java Runtime Enviroment (JRE). 
+	Dann sollte die JAVA-Umgebungsvariable gesetzt sein.
+	
+	Dann öffne eine Shell oder die Windows Kommandozeile.
+	Wechsel in das Verzeichnis wo du die TwitterClient.jar
+	abgelegt hast. Nun kannst du mit dem Befehl den 
+	TwitterClient starten:
+	
+		java -jar TwitterClient.jar
+		
+	Schon läuft der TwitterClient.
+	
+2. Wie benutze ich den TwitterClient
+	
+	Nun öffnet er die Verbindung zu Twitter 
+	und überprüft die Zugangsdaten. 
+	
+	Wenn nun "=>" angezeigt wird bist du Verbunden.
+	Jetzt kannst du Befehle absetzen. Folgende befehle sind
+	möglich:
+	
+		-f user1 [user2,...]		- 	mit diesem Befehl kannst du Usern 
+										folgen. Man kann auch mehreren User 
+										mit einmal folgen.
+										
+										bsp.:
+											-f user
+											-f user1 user2 user3
+		exit | quit					-	mit einem dieser Befehler beendet man 
+										den TwitterClient
+										
+3. Wie beende ich den TwitterClient
+
+	Er wird über den Befehl "exit" oder "quit" beendet. Das kann einige Sekunden 
+	dauern. Da er die geöffneten Verbindung wieder schließen soll.
+	
