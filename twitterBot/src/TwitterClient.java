@@ -12,8 +12,10 @@ import twitter4j.TwitterException;
 public class TwitterClient{
 
 	/**
+	 * Stats the Application. 
+	 * Here are handled the commandline function.
 	 * 
-	 * @param args
+	 * @param args not in use 
 	 */
 	public static void main(String[] args) {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -51,7 +53,10 @@ public class TwitterClient{
 	}
 
 	/**
+	 * set the main thread sleep but waiting for the open the connaction need some time
+	 * and the open stream run in a other thread
 	 * 
+	 * sleep for 2 sec
 	 */
 	public static void sleep(){
 		try { Thread.sleep(2000);} catch (InterruptedException e) {System.out.println(e.getMessage());}

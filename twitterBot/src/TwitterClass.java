@@ -14,9 +14,11 @@ import twitter4j.conf.Configuration;
 import twitter4j.conf.ConfigurationBuilder;
 
 /**
+ * The class hold the customer Application tokens and open the connection to twitter.
+ * It implements the function to listen for retweet or to follow somebody
  * 
  * @author Patrick
- *
+ * @since 04.11.11
  */
 public class TwitterClass {
 	public static final String CONSUMER_KEY = "ZcKhqof2xoRSgqrI3GtEg";
@@ -29,14 +31,12 @@ public class TwitterClass {
 	private Twitter twitter;
 	private TwitterStream tweetStream;
 
-	/**
-	 * 
-	 */
 	public TwitterClass() {
 		this("404108139-ROxkeWd8nGQgXGCNjVp02Oglank2als3SxgTWORZ","u31NstzQKjQKFwD1j17GgCwRVEVZDSUJiXPRiZKzlnA");
 	}
 
 	/**
+	 * Constructor with access information the set the twitter configuration for the application
 	 * 
 	 * @param accessToken
 	 * @param accessTokenSecret
@@ -58,12 +58,16 @@ public class TwitterClass {
 	}
 
 	/**
+	 * This method need an Array of Strings with usernames with the Persons 
+	 * they are follow.
 	 * 
-	 * @param users
-	 * @return
+	 * it use the {@link twitter4j.api.FriendshipMethods.createFriendship}
+	 * 
+	 * @param users String[] String-Array of usernames
 	 * @throws TwitterException
+	 * @see {@link twitter4j.api.FriendshipMethods}
 	 */
-	public boolean follow(String[] users) throws TwitterException {
+	public void follow(String[] users) throws TwitterException {
 		for (String userName : users) {
 			User userByString = twitter.showUser(userName);
 
@@ -71,15 +75,16 @@ public class TwitterClass {
 			System.out.println("Du folgst jetzt -> "
 					+ userByString.getScreenName());
 		}
-
-		return true;
-
 	}
 
 	/**
+	 * not in use comming soon
 	 * 
-	 * @return
+	 * load the accessToken information from a Storage (src/conf.txt)
+	 * 
+	 * @return AccessToken accessToken authentification information
 	 */
+	@SuppressWarnings("unused")
 	private AccessToken loadAccessToken() {
 		try {
 			BufferedReader fileStream = new BufferedReader(new FileReader("src/conf.txt"));
@@ -102,6 +107,7 @@ public class TwitterClass {
 	}
 
 	/**
+	 * starts a stream to twitter an fires events for all user activities on Twitter
 	 * 
 	 */
 	public void retweet() {
@@ -110,6 +116,7 @@ public class TwitterClass {
 	}
 
 	/**
+	 * close the streams and twitter connection to the TwitterClient
 	 * 
 	 */
 	public void shutdown() {

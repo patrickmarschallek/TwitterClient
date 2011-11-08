@@ -8,6 +8,8 @@ import twitter4j.UserList;
 import twitter4j.UserStreamListener;
 
 /**
+ * TwitterStatusListener implements the {@link twitter4j.UserStreamListener} interface
+ * this listener interface provide to listen on a stream and act to events on it
  * 
  * @author Patrick
  *
@@ -23,7 +25,7 @@ public class TwitterStatusListener implements UserStreamListener {
 	}
 
 	/**
-	 * 
+	 * act if a status come from a other twitter user
 	 * 
 	 * @param Status status actual Status that are tweeted
 	 */

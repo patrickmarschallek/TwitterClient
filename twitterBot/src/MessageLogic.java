@@ -1,4 +1,5 @@
 /**
+ * Implements the AI to answer for tweets.
  * 
  * @author Patrick
  *
@@ -10,8 +11,8 @@ public class MessageLogic {
 
 	/**
 	 * 
-	 * @param text
-	 * @return
+	 * @param text - String with the tweetet message
+	 * @return String message for retweet
 	 */
 	public String searchMessage(String text) {
 		if(text.matches("\\@.* Wie geht es dir?")){
