@@ -30,7 +30,7 @@ public class TwitterStatusListener implements UserStreamListener {
 	 * @param Status status actual Status that are tweeted
 	 */
 	public void onStatus(Status status) {
-		if (status.getText().matches("\\@.* .*")) {
+		if (status.getText().matches("\\@.* .*") && !status.getText().matches("\\@Apptester6 .*")) { 
 			String message = this.logic.searchMessage(status.getText());
 			System.out.println("incomming Tweet... \non Status form @"
 					+ status.getUser().getScreenName() + " --> "

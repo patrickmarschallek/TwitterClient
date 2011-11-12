@@ -21,8 +21,8 @@ import twitter4j.conf.ConfigurationBuilder;
  * @since 04.11.11
  */
 public class TwitterClass {
-	public static final String CONSUMER_KEY = "ZcKhqof2xoRSgqrI3GtEg";
-	public static final String CONSUMER_SECRET = "HdroD1DX2RIbcqZMZwkNAi0qGtGMCTjctN9nN6qqQ9Y";
+	public static final String CONSUMER_KEY = "6VhXyRRQ3FUyjHtnh733g";
+	public static final String CONSUMER_SECRET = "maf7Ud9M8ubGEzLyZyB1SPIyO7QplErbprUmdcBaE";
 
 	public static final String REQUEST_URL = "http://api.twitter.com/oauth/request_token";
 	public static final String ACCESS_URL = "http://api.twitter.com/oauth/access_token";
@@ -44,8 +44,8 @@ public class TwitterClass {
 	public TwitterClass(String accessToken, String accessTokenSecret) {
 		ConfigurationBuilder cb = new ConfigurationBuilder();
 		cb.setDebugEnabled(true)
-				// .setHttpProxyHost("proxy.fh-brandenburg.de")
-				// .setHttpProxyPort(3128)
+				 .setHttpProxyHost("proxy.fh-brandenburg.de")
+				 .setHttpProxyPort(3128)
 				.setOAuthConsumerKey(CONSUMER_KEY)
 				.setOAuthConsumerSecret(CONSUMER_SECRET)
 				.setOAuthAccessToken(accessToken)
