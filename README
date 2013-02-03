@@ -7,7 +7,7 @@ erstellt am 07.11.2011
 
 1. Wie starte ich den TwitterClient
 
-	Man ben�tigt das Java Runtime Enviroment (JRE). 
+	Man benoetigt das Java Runtime Enviroment (JRE). 
 	Dann sollte die JAVA-Umgebungsvariable gesetzt sein.
 	
 	Dann oeffne eine Shell oder die Windows Kommandozeile.
